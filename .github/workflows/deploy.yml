@@ -1,0 +1,21 @@
+name: Application Deployment
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build
+        run: echo "Building application"
+
+      - name: Test
+        run: echo "Testing application"
+
+      - name: Deploy
+        run: echo "Application deployed successfully"
